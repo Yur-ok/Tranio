@@ -14,13 +14,10 @@ def write2file(l):
 
 
 def makePath():
-    if os.path.exists('c:\\'):
-        path = 'c:\\Tranio'
-        os.makedirs(path)
-    else:
-        path = 'd:\\Tranio'
-        os.makedirs(path)
-    return path
+    pathC = 'c:\\Tranio'
+    if not os.path.exists(pathC):
+        os.makedirs(pathC)
+        return pathC
 
 
 write2file(line)
