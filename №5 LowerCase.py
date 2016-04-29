@@ -17,7 +17,7 @@ def lowUlow(string):
     p = 0
     llist = []
     for i in range(len(string)):
-        if p < 996:
+        if p < len(string):
             p +=1
         if string[i].islower() == string[p].islower():
             continue
