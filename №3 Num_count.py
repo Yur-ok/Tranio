@@ -1,9 +1,20 @@
+# Вывести данные в формате
+# (num: num_count),
+# (num: num_count),
+# ...
+# num_count - кол-во num в списке. Отсортировать по убыванию num_count, при равенстве num_count по убыванию num.
+from operator import itemgetter
+
+
 def num_count(n):
     dataDict = {}
+    sortLst = []
     for i in set(n):
         dataDict[i] = n.count(i)
-    for key in dataDict:
-        print(key, dataDict[key])
+    sortLst = sorted(dataDict.items(), key=itemgetter(1, 0), reverse=True)
+    for i in sortLst:
+        print(i)
+
 
 data = [13, 29, 37, 49, 29, 7, 25, 5, 50, 2, 18, 0, 14, 16, 14, 4, 6, 14, 2, 5, 41, 27, 10, 11, 33, 6, 7, 47, 35, 35,
         48, 0, 38, 1, 41, 15, 26, 46, 4, 23, 5, 32, 45, 37, 2, 33, 20, 30, 46, 20, 10, 14, 44, 25, 3, 27, 6, 22, 9, 20,
