@@ -1,9 +1,11 @@
 def uniq(n):
+    lst = []
     total = 0
     for i in n:
         if n.count(i) == 1:
-            total += 1
-    print('Total of uniq numbers is: ', total)
+           lst.append(i)
+    print(sorted(lst))
+    print('Total of uniq numbers is: ', len(lst))
 
 
 data = [13, 29, 37, 49, 29, 7, 25, 5, 50, 2, 18, 0, 14, 16, 14, 4, 6, 14, 2, 5, 41, 27, 10, 11, 33, 6, 7, 47, 35, 35,
