@@ -5,12 +5,11 @@ line = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNOGIP
 
 def write2file(l):
     path = makePath()
-    char = 0
-    for num in range(1, 6):
+    for i in range(5):
+        num = i + 1
         file = open(path + '\\file_' + str(num) + '.txt', 'w')
-        file.write(l[char])
+        file.write(str([i for i in l[i::5]]))
         file.close()
-        char += 1
 
 
 def makePath():
