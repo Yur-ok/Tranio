@@ -8,7 +8,7 @@ def write2file(l):
     for i in range(5):
         num = i + 1
         file = open(path + '\\file_' + str(num) + '.txt', 'w')
-        file.write(str([i for i in l[i::5]]))
+        file.write(''.join([i for i in l[i::5]]))
         file.close()
 
 
