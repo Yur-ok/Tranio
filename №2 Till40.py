@@ -1,7 +1,10 @@
 def till_40(n):
+    lst = []
     for x in range(41):
         if x not in n:
-            print(x)
+            lst.append(x)
+    print(sorted(lst))
+    print("Total numbers is :", len(lst))
 
 
 data = [13, 29, 37, 49, 29, 7, 25, 5, 50, 2, 18, 0, 14, 16, 14, 4, 6, 14, 2, 5, 41, 27, 10, 11, 33, 6, 7, 47, 35, 35,
